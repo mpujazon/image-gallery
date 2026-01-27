@@ -10,4 +10,5 @@ import {Image} from '../interfaces/image';
 })
 export class ImageItem {
   image = input.required<Image>();
+  isFeatured = input.required<boolean>();
 }

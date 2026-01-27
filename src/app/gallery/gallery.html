@@ -1,6 +1,9 @@
 <h1>Image Gallery</h1>
 <section id="gallery-container" class="">
   @for (image of images; track image.id){
-    <app-image-item [image]="image"/>
+    <app-image-item
+      [image]="image"
+      [isFeatured]="$first"
+    />
   }
 </section>
