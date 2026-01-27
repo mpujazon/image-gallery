@@ -8,4 +8,5 @@ import {Image} from '../interfaces/image';
   styleUrl: './image-item.css',
 })
 export class ImageItem {
+  image = input.required<Image>();
 }
