@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import {Image} from '../interfaces/image';
 import {ImageItem} from '../image-item/image-item';
+import {NgClass} from '@angular/common';
 
 @Component({
   selector: 'app-gallery',
   imports: [
-    ImageItem
+    ImageItem,
+    NgClass
   ],
   templateUrl: './gallery.html',
   styleUrl: './gallery.css',

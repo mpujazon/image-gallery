@@ -1,9 +1,13 @@
-<h1>Image Gallery</h1>
-<section id="gallery-container" class="">
+<h1 class="text-center font-bold text-3xl">Image Gallery</h1>
+<section
+  id="gallery-container"
+  class="w-full grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4 justify-items-center">
   @for (image of images; track image.id){
     <app-image-item
       [image]="image"
-      [isFeatured]="$first"
+      [ngClass]="{
+        'col-span-2 row-span-2': $first
+      }"
     />
   }
 </section>
