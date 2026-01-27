@@ -1,4 +1,4 @@
-import {Component, input} from '@angular/core';
+import {ChangeDetectionStrategy, Component, input} from '@angular/core';
 import {Image} from '../interfaces/image';
 
 @Component({
@@ -6,6 +6,7 @@ import {Image} from '../interfaces/image';
   imports: [],
   templateUrl: './image-item.html',
   styleUrl: './image-item.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ImageItem {
   image = input.required<Image>();
