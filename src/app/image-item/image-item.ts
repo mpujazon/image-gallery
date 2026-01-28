@@ -1,6 +1,5 @@
 import {ChangeDetectionStrategy, Component, input} from '@angular/core';
 import {Image} from '../interfaces/image';
-import {NgClass} from '@angular/common';
 
 @Component({
   selector: 'app-image-item',
