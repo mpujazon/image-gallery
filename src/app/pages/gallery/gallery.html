@@ -1,14 +1,16 @@
-<h1 class="text-center font-bold text-3xl">Image Gallery</h1>
-<section
-  id="gallery-container"
-  class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center">
-  @for (image of images; track image.id){
-    <app-image-item
-      [image]="image"
-      [ngClass]="{
-        'col-span-1 row-span-1 sm:col-span-2 sm:row-span-2 lg:col-span-2 lg:row-span-2': $first
-      }"
-      class="w-full h-full"
-    />
-  }
-</section>
+<main class="w-11/12 mx-auto">
+  <h1 class="text-center font-bold text-3xl m-4">Image Gallery</h1>
+  <section
+    id="gallery-container"
+    class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center">
+    @for (image of images; track image.id){
+      <app-image-item
+        [image]="image"
+        [ngClass]="{
+          'col-span-1 row-span-1 sm:col-span-2 sm:row-span-2 lg:col-span-2 lg:row-span-2': $first
+        }"
+        class="w-full h-full"
+      />
+    }
+  </section>
+</main>
