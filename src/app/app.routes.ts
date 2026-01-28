@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import {Gallery} from './gallery/gallery';
+import {Gallery} from './pages/gallery/gallery';
 
 export const routes: Routes = [
 ];

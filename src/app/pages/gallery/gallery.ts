@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {Image} from '../interfaces/image';
-import {ImageItem} from '../image-item/image-item';
+import {Image} from '../../interfaces/image';
+import {ImageItem} from '../../components/image-item/image-item';
 import {NgClass} from '@angular/common';
 
 @Component({

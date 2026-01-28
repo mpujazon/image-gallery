@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, input} from '@angular/core';
-import {Image} from '../interfaces/image';
+import {Image} from '../../interfaces/image';
 import {NgOptimizedImage} from '@angular/common';
 
 @Component({

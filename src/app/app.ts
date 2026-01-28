@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import {Gallery} from './gallery/gallery';
+import {Gallery} from './pages/gallery/gallery';
 
 @Component({
   selector: 'app-root',
