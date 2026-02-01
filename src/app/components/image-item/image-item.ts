@@ -8,7 +8,6 @@ import {NgOptimizedImage} from '@angular/common';
     NgOptimizedImage
   ],
   templateUrl: './image-item.html',
-  styleUrl: './image-item.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ImageItem {
