@@ -5,6 +5,7 @@
     @for (image of images; track image.id){
       <app-image-item
         [image]="image"
+        [isFirstImage]="$first"
         [ngClass]="{
           'col-span-1 row-span-1 sm:col-span-2 sm:row-span-2 lg:col-span-2 lg:row-span-2 rounded-xl': $first
         }"

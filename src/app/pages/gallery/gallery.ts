@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {Image} from '../../interfaces/image';
 import {ImageItem} from '../../components/image-item/image-item';
-import {NgClass} from '@angular/common';
+import {NgClass, NgOptimizedImage} from '@angular/common';
 
 @Component({
   selector: 'app-gallery',

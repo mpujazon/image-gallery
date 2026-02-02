@@ -12,4 +12,5 @@ import {NgOptimizedImage} from '@angular/common';
 })
 export class ImageItem {
   image = input.required<Image>();
+  isFirstImage = input.required<boolean>();
 }
