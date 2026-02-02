@@ -164,7 +164,7 @@ export class Gallery {
   ]);
 
   removeImage(id: string){
-    window.confirm("Are you sure you want to delete?")?
+    window.confirm(`Are you sure you want to delete the image with id ${id}?`)?
       this.images.update(images => images.filter(image=>image.id!==id))
       :"";
   }

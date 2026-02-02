@@ -13,10 +13,10 @@ import {NgOptimizedImage} from '@angular/common';
 export class ImageItem {
   image = input.required<Image>();
   priority = input.required<boolean>();
-  deleteImage = output<string>();
+  deleteImageId = output<string>();
 
   onDeleteClick(event: Event) {
     event.stopPropagation();
-    this.deleteImage.emit(this.image().id);
+    this.deleteImageId.emit(this.image().id);
   }
 }
