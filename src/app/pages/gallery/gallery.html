@@ -6,9 +6,8 @@
       <app-image-item
         [image]="image"
         [priority]="$first"
-        [ngClass]="{
-          'col-span-2 row-span-2': $first
-        }"
+        [class.col-span-2]="$first"
+        [class.row-span-2]="$first"
       />
     }
   </section>
