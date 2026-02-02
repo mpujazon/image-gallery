@@ -1,7 +1,8 @@
 <img
   [ngSrc]="image().src"
+  [alt]="image().alt"
+  [priority]="priority()"
   width="400"
   height="300"
-  [alt]="image().alt"
-  class="rounded-2xl w-full h-full"
+  class="rounded-xl w-full h-full z-10 transition-all duration-300 md:hover:scale-[1.02] shadow-lg dark:shadow-xl md:hover:shadow-2xl dark:md:hover:shadow-2xl"
 >
