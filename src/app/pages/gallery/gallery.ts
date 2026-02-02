@@ -1,18 +1,16 @@
-import { Component } from '@angular/core';
+import {Component, signal} from '@angular/core';
 import {Image} from '../../interfaces/image';
 import {ImageItem} from '../../components/image-item/image-item';
-import {NgClass, NgOptimizedImage} from '@angular/common';
 
 @Component({
   selector: 'app-gallery',
   imports: [
-    ImageItem,
-    NgClass
+    ImageItem
   ],
   templateUrl: './gallery.html'
 })
 export class Gallery {
-  images: Image[] = [
+  images = signal<Image[]>([
     {
       id: "1",
       src: "https://picsum.photos/1024/768?random=1",
@@ -163,5 +161,11 @@ export class Gallery {
       src: "https://picsum.photos/1024/768?random=30",
       alt: "Random image 30"
     }
-  ];
+  ]);
+
+  removeImage(id: string){
+    window.confirm("Are you sure you want to delete?")?
+      this.images.update(images => images.filter(image=>image.id!==id))
+      :"";
+  }
 }
