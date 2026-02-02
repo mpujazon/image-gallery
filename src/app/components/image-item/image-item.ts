@@ -1,6 +1,6 @@
-import {ChangeDetectionStrategy, Component, input} from '@angular/core';
+import {ChangeDetectionStrategy, Component, input, output} from '@angular/core';
 import {Image} from '../../interfaces/image';
-import {NgClass, NgOptimizedImage} from '@angular/common';
+import {NgOptimizedImage} from '@angular/common';
 
 @Component({
   selector: 'app-image-item',
@@ -13,4 +13,5 @@ import {NgClass, NgOptimizedImage} from '@angular/common';
 export class ImageItem {
   image = input.required<Image>();
   priority = input.required<boolean>();
+  deleteImage = output<string>();
 }
