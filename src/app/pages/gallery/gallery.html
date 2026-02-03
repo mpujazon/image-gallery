@@ -6,8 +6,7 @@
       <app-image-item
         [image]="image"
         [priority]="$first"
-        [class.col-span-2]="$first"
-        [class.row-span-2]="$first"
+        [isFeatured]="image.id === featuredImageId()"
         (deleteImageId)="removeImage(image.id)"
       />
     }
