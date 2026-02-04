@@ -165,7 +165,7 @@ export class Gallery {
   featuredImageId = signal<string>(this.images()[0].id || '');
 
   removeImage(id: string){
-    window.confirm(`Are you sure you want to delete the image with id ${id}?`)?
+    window.confirm(`Are you sure you want to delete the image?`)?
       this.images.update(images => images.filter(image=>image.id!==id))
       :"";
   }
