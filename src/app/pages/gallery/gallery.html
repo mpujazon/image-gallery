@@ -5,8 +5,7 @@
     @for (image of images(); track image.id){
       <app-image-item
         [image]="image"
-        [priority]="$first"
-        [isFeatured]="image.id === featuredImageId()"
+        [isFeatured]="$first"
         (deleteImageId)="removeImage(image.id)"
       />
     }

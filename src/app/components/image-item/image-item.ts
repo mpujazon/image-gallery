@@ -10,14 +10,12 @@ import {NgOptimizedImage} from '@angular/common';
   host:{
     '[class.col-span-2]': 'isFeatured()',
     '[class.row-span-2]': 'isFeatured()'
-
   },
   templateUrl: './image-item.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ImageItem {
   image = input.required<Image>();
-  priority = input.required<boolean>();
   isFeatured = input.required<boolean>();
 
   deleteImageId = output<string>();

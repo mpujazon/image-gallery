@@ -1,4 +1,4 @@
-import {Component, computed, signal} from '@angular/core';
+import {Component, signal} from '@angular/core';
 import {Image} from '../../interfaces/image';
 import {ImageItem} from '../../components/image-item/image-item';
 
@@ -162,7 +162,6 @@ export class Gallery {
       alt: "Random image 30"
     }
   ]);
-  featuredImageId = signal<string>(this.images()[0].id || '');
 
   removeImage(id: string){
     window.confirm(`Are you sure you want to delete the image?`)?

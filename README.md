@@ -1,59 +1,88 @@
-                                             # ImageGallery
+# Sprint 4 - Image Gallery
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.1.
+## Description
 
-## Development server
+Angular 21 web app with Tailwind CSS v4 that showcases an interactive, responsive image gallery. It features dynamic image management with grid layout, featured image display, individual and bulk deletion, and drag-and-drop reordering capabilities. Built with modern Angular patterns including standalone components and signals for state management.
 
-To start a local development server, run:
+![Project Demo](/public/demo.gif "Project Demo")
 
-```bash
-ng serve
+## Project Structure
+
+```
+image-gallery/
+├── index.html
+├── package.json
+├── angular.json
+├── public/
+└── src/
+    ├── main.ts              # App entry point
+    ├── styles.css           # Global styles and responsive layout
+    ├── index.html           # HTML template
+    └── app/
+        ├── app.ts           # Root component
+        ├── app.html         # Root template
+        ├── app.css          # Root styles
+        ├── app.routes.ts    # Application routes
+        ├── app.config.ts    # Application configuration
+        ├── interfaces/
+        │   └── image.ts     # Image data type
+        ├── components/
+        │   └── image-item/
+        │       ├── image-item.ts
+        │       └── image-item.html
+        ├── layouts/
+        │    └─ page-header/
+        │       ├── page-header.ts
+        │       └── page-header.html
+        └── pages/
+            └── gallery/
+                ├── gallery.ts       # Gallery page logic and state
+                ├── gallery.html     # Gallery template
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Technologies
 
-## Code scaffolding
+- Angular 21
+- TypeScript 5.9
+- Tailwind CSS 4
+- PrimeNG and PrimeUX UI Components
+- pnpm (Package manager)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Requirements
 
-```bash
-ng generate component component-name
-```
+- Node.js 18+
+- pnpm 10.28.0+
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+## Installation
 
 ```bash
-ng build
+git clone <repo-url>
+cd image-gallery
+pnpm install
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Run
 
-## Running unit tests
+- Dev server: `pnpm start` or `ng serve`
+- Production build: `pnpm build` or `ng build`
+- Run tests: `pnpm test` or `ng test`
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Features
 
-```bash
-ng test
-```
+- **Responsive Grid Layout**: Displays images in a responsive grid that adapts to different screen sizes
+- **Featured Image**: First image is highlighted and displayed prominently
+- **Individual Deletion**: Delete single images with confirmation
+- **State Management with Signals**: Uses Angular signals for reactive state management
+- **Component Communication**: Parent-child communication using inputs and outputs
+- **Accessible Design**: Built with accessibility and semantic HTML in mind
+- **Modern Control Flow**: Uses Angular's new built-in control flow syntax (`@if`, `@for`)
 
-## Running end-to-end tests
+## Learnings
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Building standalone components in Angular 21
+- Using signals for state management without traditional RxJS observables
+- Parent-child component communication with `@Input()` and `@Output()`
+- Modern Angular control flow with `@if`, `@for`, and `@switch`
+- Styling with Tailwind CSS v4 and PrimeNG theming
+- Responsive design patterns
+- Accessibility best practices in modern web applications

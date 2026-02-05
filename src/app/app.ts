@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import {Gallery} from './pages/gallery/gallery';
 import {RouterOutlet} from '@angular/router';
-import {PageHeader} from './components/page-header/page-header';
+import {PageHeader} from './layouts/page-header/page-header';
 
 @Component({
   selector: 'app-root',
